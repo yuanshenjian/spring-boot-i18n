@@ -1,0 +1,10 @@
+.gradle/
+.idea/
+.sass-cache/
+bower_components/
+build/
+node_modules/
+target/
+*.iml
+classes/*
+src/main/resources/static/vendor/
