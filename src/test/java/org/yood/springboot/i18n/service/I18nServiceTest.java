@@ -19,7 +19,7 @@ public class I18nServiceTest {
 
     @Test
     public void testGetMessage() throws Exception {
-        String id = "thoughtwors.name";
+        String id = "thoughtworks.name";
         String message = i18nService.getMessage(id);
         assertEquals("ThoughtWorks,lnc.",message);
     }

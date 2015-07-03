@@ -46,9 +46,9 @@ public class I18nControllerTest {
     @Test
     public void testShowCompanyName() throws Exception {
         String id = "thoughtworks.name";
-        String result = null;
+        String result = "ThoughtWorks,lnc.";
         when(i18nService.getMessage(id)).thenReturn(result);
-        mockMvc.perform(get("companies/1").accept(MediaType.APPLICATION_JSON)).
+        mockMvc.perform(get("/companies/1").accept(MediaType.APPLICATION_JSON)).
                 andExpect(jsonPath("$.companyName", is(result)));
     }
 }

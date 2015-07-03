@@ -6,6 +6,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.support.ReloadableResourceBundleMessageSource;
 import org.springframework.web.servlet.LocaleResolver;
 import org.springframework.web.servlet.i18n.SessionLocaleResolver;
+import org.yood.springboot.i18n.util.EncodingUtils;
 
 import java.util.Locale;
 
@@ -22,10 +23,11 @@ public class SpringBootI18nApplication {
 
 
     @Bean
-    public ReloadableResourceBundleMessageSource reloadableResourceBundleMessageSource() {
+    public ReloadableResourceBundleMessageSource messageSource() {
         ReloadableResourceBundleMessageSource messageSource = new ReloadableResourceBundleMessageSource();
         messageSource.setBasename("classpath:locale/messages");
-        messageSource.setCacheSeconds(60 * 60);
+        messageSource.setDefaultEncoding(EncodingUtils.UTF_8);
+        messageSource.setCacheSeconds(0);
         return messageSource;
     }
 

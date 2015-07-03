@@ -1,5 +1,6 @@
 .gradle/
 .idea/
+.log/
 .sass-cache/
 bower_components/
 build/
